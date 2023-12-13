@@ -270,6 +270,7 @@ df_year_col_ag_land  = df_specific_feature(
 print(df_year_col_ag_land.describe())
 time_series_plot(df_year_col_ag_land,'Agricultural land (% of land area)')
 
+# Data of Iran and Islamic countries
 df_year_col_islam = df_specific_feature(
     df_year_col_temp, 'Country Name', ['Iran, Islamic Rep.'])
 data_heat_map_islam = get_data_indicator(df_year_col_islam)
@@ -286,6 +287,7 @@ sns.heatmap(
     data_heat_map_islam_sub.corr(),
     annot=True, linewidths=.5, fmt='.3g')
 
+# Data of United Kingdom
 df_year_col_uk = df_specific_feature(
     df_year_col_temp, 'Country Name', ['United Kingdom'])
 data_heat_map_uk = get_data_indicator(df_year_col_islam)
